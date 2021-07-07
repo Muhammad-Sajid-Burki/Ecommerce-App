@@ -4,7 +4,6 @@ import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/screens/home_detail_page.dart';
 import 'package:flutter_catalog/widgets/theme.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '';
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
@@ -71,7 +70,7 @@ class CatalogItem extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {},
-                    child: "Buy".text.make(),
+                    child: "Add to cart".text.make(),
                   )
                 ],
               ).pOnly(right: 8.0)

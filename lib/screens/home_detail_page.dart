@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
-import 'package:flutter_catalog/widgets/home_widget/catalog_list.dart';
 import 'package:flutter_catalog/widgets/theme.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -12,7 +11,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -31,8 +32,8 @@ class HomeDetailPage extends StatelessWidget {
                 ),
               ),
               onPressed: () {},
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to Cart".text.make(),
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
@@ -54,17 +55,24 @@ class HomeDetailPage extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                   width: context.screenWidth,
-                  child: Column(
-                    children: [
-                      catalog.name.text.xl4.bold
-                          .color(MyTheme.darkBluishColor)
-                          .make(),
-                      catalog.desc.text.xl
-                          .textStyle(context.captionStyle)
-                          .make(),
-                      10.heightBox,
-                    ],
-                  ).py64(),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        catalog.name.text.xl4.bold
+                            .color(MyTheme.darkBluishColor)
+                            .make(),
+                        catalog.desc.text.xl
+                            .textStyle(context.captionStyle)
+                            .make(),
+                        10.heightBox,
+                        "Nonumy dolores dolores sit accusam et ea justo takimata. Stet elitr erat invidunt sit takimata labore. Aliquyam sit ipsum sit eirmod sed ea amet lorem. Elitr aliquyam at nonumy sit eirmod justo no amet eos. Lorem eos sit gubergren sea. Sanctus ut sed rebum clita amet est ea, eos lorem."
+                            .text
+                            .textStyle(context.captionStyle)
+                            .make()
+                            .p16()
+                      ],
+                    ).py64(),
+                  ),
                 ),
               ),
             )
