@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         FocusScope.of(context).requestFocus(new FocusNode());
       },
       child: MaterialApp(
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         theme: MyTheme.lightTheme(context),
         darkTheme: MyTheme.darkTheme(context),
         debugShowCheckedModeBanner: false,
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           "/": (context) => LoginPage(),
           MyRoutes.homeRoute: (context) => HomePage(),
           MyRoutes.loginRoute: (context) => LoginPage(),
-          MyRoutes.CartRoute: (context) => CartPage(),
+          MyRoutes.cartRoute: (context) => CartPage(),
         },
       ),
     );
