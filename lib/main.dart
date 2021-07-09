@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         FocusScope.of(context).requestFocus(new FocusNode());
       },
       child: MaterialApp(
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         theme: MyTheme.lightTheme(context),
         darkTheme: MyTheme.darkTheme(context),
         debugShowCheckedModeBanner: false,
