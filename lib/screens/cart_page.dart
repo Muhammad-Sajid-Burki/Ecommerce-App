@@ -30,6 +30,7 @@ class _CartTotal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           VxBuilder(
+            mutations: {RemoveMutation},
             builder: (context, store, _) {
               return "\$${_cart.totalPrice}"
                   .text
@@ -37,7 +38,6 @@ class _CartTotal extends StatelessWidget {
                   .color(context.accentColor)
                   .make();
             },
-            mutations: {RemoveMutation},
           ),
           WidthBox(30),
           ElevatedButton(
@@ -76,9 +76,10 @@ class _CartList extends StatelessWidget {
                     onPressed: () => RemoveMutation(_cart.items[index]),
                   ),
                   title: _cart.items[index].name.text.make(),
-                  subtitle: _cart.items[index].price.text.make(),
+                  subtitle: "\$${_cart.items[index].price}"
+                      .text
+                      .color(Colors.red[900])
+                      .make(),
                 ));
   }
 }
-
-
