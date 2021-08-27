@@ -10,6 +10,7 @@ class MyTheme {
         canvasColor: creamColor,
         buttonColor: darkBluishColor,
         accentColor: darkBluishColor,
+        hintColor: Colors.red[900],
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -27,6 +28,7 @@ class MyTheme {
         canvasColor: darkCreamColor,
         buttonColor: lightBluishColor,
         accentColor: Colors.white,
+        hintColor: Colors.red[500],
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,

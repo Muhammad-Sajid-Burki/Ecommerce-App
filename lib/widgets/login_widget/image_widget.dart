@@ -1,14 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class CatalogHeader extends StatelessWidget {
+class LoginImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        "ECommerce App".text.xl5.bold.color(context.theme.accentColor).make(),
-        "Trending Products".text.xl2.make()
+        Image.asset(
+          'assets/homepage_hey.png',
+          fit: BoxFit.cover,
+        ),
       ],
     );
   }

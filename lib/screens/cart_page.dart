@@ -78,7 +78,7 @@ class _CartList extends StatelessWidget {
                   title: _cart.items[index].name.text.make(),
                   subtitle: "\$${_cart.items[index].price}"
                       .text
-                      .color(Colors.red[900])
+                      .color(context.theme.hintColor)
                       .make(),
                 ));
   }
